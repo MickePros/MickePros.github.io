@@ -3,9 +3,21 @@ const verb = ['is dancing with', 'is baking with', 'is running with', 'is joking
 const female = ['Tina','Dora','Maria','Freya','Lisa'];
 
 const randomMessage = (male, verb, female) => {
-    let word1 = randomWord(male);
-    let word2 = randomWord(verb);
-    let word3 = randomWord(female);
+    let word1, word2, word3, first;
+    if (Math.floor(Math.random() * 2)) {
+        word1 = randomWord(male);
+        first = 'male';
+    } else {
+        word1 = randomWord(female);
+        first = 'female';
+    }
+    word2 = randomWord(verb);
+    if (first === 'male') {
+        word3 = randomWord(female);
+    } else {
+        word3 = randomWord(male);
+    }
+
     return `${word1} ${word2} ${word3}.`;
 }
 
