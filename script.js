@@ -3,7 +3,14 @@ const verb = ['is dancing with', 'is baking with', 'is running with', 'is joking
 const female = ['Tina','Dora','Maria','Freya','Lisa'];
 
 const randomMessage = (male, verb, female) => {
-    return 'test';
+    let word1 = randomWord(male);
+    let word2 = randomWord(verb);
+    let word3 = randomWord(female);
+    return `${word1} ${word2} ${word3}.`;
+}
+
+const randomWord = arr => {
+    return arr[Math.floor(Math.random() * arr.length)];
 }
 
 console.log(randomMessage(male,verb,female));
