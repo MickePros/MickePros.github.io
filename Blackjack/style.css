@@ -1,0 +1,20 @@
+.dealer-row,
+.player-row {
+    min-height: 398px;
+    background-color:darkgreen;
+    color:gainsboro;
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
+    padding: 20px 30px;
+    border: 10px solid saddlebrown;
+    border-top: 10px solid maroon;
+    border-bottom: 10px solid sandybrown;
+}
+
+.dealer-row {
+    border-radius: 5px 5px 0 0;
+}
+
+.player-row {
+    border-radius: 0 0 5px 5px;
+}
